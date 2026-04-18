@@ -1,0 +1,30 @@
+{
+  "name": "codebase-intel",
+  "version": "0.1.0",
+  "description": "E2E smoke tests for nexus-agents code-intelligence MCP tools: extract_symbols, search_codebase, repo_analyze, repo_security_plan",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamzujkowski/codebase-intel.git"
+  },
+  "keywords": [
+    "nexus-agents",
+    "nexus-agents-test",
+    "mcp",
+    "smoke-test",
+    "code-intelligence"
+  ],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0",
+    "zod": "^4.0.0"
+  }
+}
