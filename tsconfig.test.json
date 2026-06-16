@@ -1,0 +1,13 @@
+{
+  // Type-check the test files too. The base tsconfig.json excludes
+  // **/*.test.ts so `build` (tsc emit) never writes test declarations into
+  // dist/; this config re-includes them under --noEmit so `typecheck` actually
+  // verifies the contract test — the repo's whole deliverable.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "declaration": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
